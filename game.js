@@ -107,8 +107,8 @@ function startGame() {
 }
 
 function movePlayer() {
-    const giftCollisionX = playerPosition.x.toFixed(3) == giftPosition.x.toFixed(3);
-    const giftCollisionY = playerPosition.y.toFixed(3) == giftPosition.y.toFixed(3);
+    const giftCollisionX = playerPosition.x.toFixed(2) == giftPosition.x.toFixed(2);
+    const giftCollisionY = playerPosition.y.toFixed(2) == giftPosition.y.toFixed(2);
 
     const giftCollision = giftCollisionX && giftCollisionY;
 
@@ -117,8 +117,8 @@ function movePlayer() {
     }
 
     const enemyCollision = enemyPositions.find(enemy => {
-        const enemyCollisionX = enemy.x.toFixed(3) == playerPosition.x;
-        const enemyCollisionY = enemy.y.toFixed(3) == playerPosition.y;
+        const enemyCollisionX = enemy.x.toFixed(2) == playerPosition.x.toFixed(2);
+        const enemyCollisionY = enemy.y.toFixed(2) == playerPosition.y.toFixed(2);
         return enemyCollisionX && enemyCollisionY;
     });
 
